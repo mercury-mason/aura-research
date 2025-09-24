@@ -1,0 +1,53 @@
+# AURA ignores
+data/raw/                    # raw datasets (often large, should be documented not stored)
+data/temp/                   # temporary processing files
+results/cache/               # cached results (can be regenerated)
+.env                         # environment variables with API keys
+*.api-key                    # any files containing API keys
+logs/*.log                   # log files (can get very large)
+.aura-state/                 # internal AURA state files
+
+# AI tool configurations - private configs and cache files
+.claude/                     # Claude Code's local config
+.codex/                      # Codex's local config
+.windsurf/                   # Windsurf's local preferences and cache
+.cline/                      # Cline's local state and conversation history
+node_modules/                # if any tools install npm dependencies
+__pycache__/                 
+
+# Research data and model files - too large for Git, should use Git LFS or external storage
+*.pkl                        # pickle files (often large datasets)
+*.h5                         # HDF5 files (common in ML)
+*.hdf5                       # another HDF5 extension
+*.model                      # saved model files
+*.pth                        # PyTorch model files  
+*.msgpack                    # JAX/Flax serialized parameters
+*.orbax                      # Orbax checkpoint format
+*.flax                       # Flax model files
+*.safetensors                # Hugging Face model format
+*.ckpt                       # Checkpoint files
+temp/                        # Any temporary directories
+checkpoints/                 # Training checkpoints
+wandb/                       # Weights & Biases local files
+.mlflow/                     # MLflow tracking files
+
+# Development environment files (tentative)
+.vscode/                     # VS code workspace settings
+*.swp                        # Vim swap files
+*.swo                        # Vim swap files
+.DS_Store                    # macOS file system metadata
+Thumbs.db                    # Windows thumbnail cache
+
+# Python specific
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment variables
+.env.local
+.env.*.local
